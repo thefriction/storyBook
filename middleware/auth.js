@@ -1,5 +1,6 @@
 module.exports = {
-    ensureAuth: function(req,res,next){
+    ensureAuth: function(req,res,next)
+    {
         if(req.isAuthenticated())
         {
             if(req.isAuthenticated())
@@ -12,7 +13,8 @@ module.exports = {
             res.redirect('/')
         }
     },
-    ensureGuest: function(req,res,next){
+    ensureGuest: function(req,res,next)
+    {
         if(req.isAuthenticated()) 
         {
             res.redirect('/dashboard')
@@ -22,5 +24,5 @@ module.exports = {
             return next();
 
         }
-    }
+    },
 }
